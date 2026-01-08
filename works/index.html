@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>상세페이지 디자인</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/img/titleimg.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/img/titleimg.png">
+        <!--CSS 연결-->
+        <link rel="stylesheet" href="../css/style_detailpage.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <!--java script 연결-->
+        <script src="../javascript/script_detailpage.js" defer></script>
+    </head>
+
+    <body>
+        <!-- 전체 배경 -->
+        <div class="detail-wrap">
+            <!-- 흰색 둥근 배경 -->
+            <section class="detail-container">
+                <!-- 타이틀 -->
+                <header class="detail-header">
+                    <h2>DETAIL PAGE</h2>
+                    <span class="sub-title">상세페이지 디자인</span>
+                </header>
+
+                <!-- 탭 -->
+                <div class="detail-tabs">
+                    <button class="tab active" data-tab="shop">쇼핑몰 디자인</button>
+                    <button class="tab" data-tab="clinic">성형외과 디자인</button>
+                </div>
+
+                <!-- 카드 영역 -->
+                <div class="card-bg">
+                    <div class="card-grid active" id="shop">
+                        <!-- 쇼핑몰 카드 -->
+                        <a href="#" class="detail-card"
+                            data-title="어그 벨벳 실크라이크 밴딩팬츠"
+                            data-desc="
+                                어떤 상의에도 무난하게 잘 어울리는 하의이지만 디자인 자체는 무난하기 때문에,<br>
+                                어떤 상의에도 어울리는 <b>코디의 다양성과 좋은 소재를 강조</b> 할 수 있도록 디자인 하였습니다.
+                            "
+                            data-images="
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857113/251118_osy_bnt196_01_tgvbzg.gif,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857111/251118_osy_bnt196_02_hro0pd.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857102/251118_osy_bnt196_03_kogwgd.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857105/251118_osy_bnt196_03-1_zfcgh2.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857099/251118_osy_bnt196_04_b2sfyc.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857090/251118_osy_bnt196_05_ozcsug.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857108/251118_osy_bnt196_06_uk7gk7.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857097/251118_osy_bnt196_07_x1f2vs.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857091/251118_osy_bnt196_08_xlcgky.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857106/251118_osy_bnt196_09_w9t579.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857094/251118_osy_bnt196_10_me0pff.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857084/251118_osy_bnt196_11_hcpza8.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857103/251118_osy_bnt196_12_vr5np2.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857085/251118_osy_bnt196_13_a6sapp.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857093/251118_osy_bnt196_14_hkcjcx.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857100/251118_osy_bnt196_15_fvpu8z.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857096/251118_osy_bnt196_16_uo7n9p.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857087/251118_osy_bnt196_17_idkyvp.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857088/251118_osy_bnt196_18_cxwwwx.jpg
+                            ">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767857502/detail_tn01_bg_drurhf.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767857503/detail_tn01_ph_wi7pap.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                            </a>
+
+                        <a href="#" class="detail-card"
+                            data-title="데님라이크 벨벳터치 기모 슬랙스"
+                            data-desc="
+                                전체 핏을 먼저 보여주는 일반적인 구성 대신, <b>데님 소재인 의상의 포인트가 잘 드러나는 컷을 활용해 특징을 강조</b>했습니다.<br>
+                                또한 착용컷을 단순 나열하지 않고 <b>GIF 요소를 적절히 활용해</b> 시각 흐름이 지루하지 않도록 구성했습니다.
+                            "
+                            data-images="
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857591/251110_osy_bnt193_01_pw3hmr.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857589/251110_osy_bnt193_02_v5meqv.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857607/251110_osy_bnt193_03_kbalrx.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857583/251110_osy_bnt193_04_beuu5b.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857585/251110_osy_bnt193_05_ct1rvm.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857577/251110_osy_bnt193_06_vlmvze.gif,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857581/251110_osy_bnt193_07_u6eas4.gif,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857592/251110_osy_bnt193_08_vajemn.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857587/251110_osy_bnt193_09_oauokg.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857579/251110_osy_bnt193_10_oolddq.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857597/251110_osy_bnt193_11_cfrftc.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857573/251110_osy_bnt193_12_xklsdq.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857595/251110_osy_bnt193_13_ypbbob.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857575/251110_osy_bnt193_14_q1tdbw.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857598/251110_osy_bnt193_15_ny2uf6.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857600/251110_osy_bnt193_20_evtvme.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857603/251110_osy_bnt193_25_wrmniw.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857609/251110_osy_bnt193_26_bwci7k.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767857604/251110_osy_bnt193_30_ywrsx4.jpg
+                            ">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767858236/detail_tn02_bg_wftvrn.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767858237/detail_tn02_ph_sydp9b.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                            </a>
+
+
+                        <a href="#" class="detail-card"
+                            data-title="Better Jeans (No.283) 프리미엄 코튼텐셀 페미닌 스트레이트"
+                            data-desc="
+                                무난한 핏과 컬러의 상품인 만큼 핏을 먼저 강조하기보다,<br>
+                                코디와 배경이 돋보이는 이미지를 인트로에 배치해 <b>바지의 무드</b>를 먼저 전달했습니다.<br>
+                                이후 핏과 질감이 잘 보이는 컷과 다양한 코디가 가능한 <b>룩북 디자인을 구성</b>해 상품의 정보와 활용도를 함께 보여주었습니다.
+                            "
+                            data-images="
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858300/250922_osy_betterjeans283_01_iicw4z.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858325/250922_osy_betterjeans283_02_sgoqne.gif,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858302/250922_osy_betterjeans283_03_pba589.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858304/250922_osy_betterjeans283_04_t258jv.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858306/250922_osy_betterjeans283_05_apfwyw.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858309/250922_osy_betterjeans283_06_cu3wol.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858311/250922_osy_betterjeans283_07_khdkav.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858313/250922_osy_betterjeans283_08_lemb5a.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858316/250922_osy_betterjeans283_09_d3yoro.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858318/250922_osy_betterjeans283_10_qpnygt.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858322/250922_osy_betterjeans283_11_nbxss8.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858320/250922_osy_betterjeans283_12_i3gcup.jpg
+                            ">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767858555/detail_tn03_bg_qd3fex.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767858558/detail_tn03_ph_z3mwiq.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                            </a>
+
+                        <a href="#" class="detail-card"
+                            data-title="모어딘 프리미엄 레더 루즈 블루종 자켓"
+                            data-desc="
+                                파리를 배경으로 한 이미지를 메인으로 활용해, <b>파리 패션 매거진을 연상시키는 감각적인 무드의 디자인을 구성</b>했습니다.<br>
+                                도시의 분위기를 살려 세련되고 에디토리얼한 느낌을 강조했습니다.
+                            "
+                            data-images="
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858701/250930_osy_bnt25fw719jp_01_csmbhp.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858717/250930_osy_bnt25fw719jp_02_gonsxo.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858711/250930_osy_bnt25fw719jp_03_yofnhr.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858714/250930_osy_bnt25fw719jp_04_tgcbvv.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858685/250930_osy_bnt25fw719jp_05_wy6lsf.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858703/250930_osy_bnt25fw719jp_06_acjgsu.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858690/250930_osy_bnt25fw719jp_07_y1cs8k.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858680/250930_osy_bnt25fw719jp_08_hjwemh.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858706/250930_osy_bnt25fw719jp_09_jh6kte.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858698/250930_osy_bnt25fw719jp_10_lgiapz.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858695/250930_osy_bnt25fw719jp_11_j0cggt.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858683/250930_osy_bnt25fw719jp_12_r3gmqo.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858708/250930_osy_bnt25fw719jp_13_ucr87s.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858693/250930_osy_bnt25fw719jp_14_bufg6x.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767858688/250930_osy_bnt25fw719jp_15_ubcrsz.jpg
+                            ">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767858997/detail_tn05_bg_vce8hv.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767859000/detail_tn04_ph_uqx2yy.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                            </a>
+
+                        <a href="#" class="detail-card"
+                            data-title="프리미엄 메종 폭스퍼 벨티드 하프 패딩"
+                            data-desc="
+                                <b>상단에 고스트컷을 배치</b>해 패딩의 디자인과 컬러 구성을 한눈에 파악할 수 있도록 했습니다.<br>
+                                <b>촬영본의 계절감 부족을 보완</b>하기 위해 눈 결정 이모티콘과 눈 내리는 효과를 활용하고, 전체 톤을 낮추는 보정을 통해 겨울 분위기를 살렸습니다.
+                            "
+                            data-images="
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859230/251112_osy_bnt711_01_t2eten.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859267/251112_osy_bnt711_02_tgqxqj.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859206/251112_osy_bnt711_03_buexmt.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859283/251112_osy_bnt711_04_lespdm.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859185/251112_osy_bnt711_05_bo5rjz.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859197/251112_osy_bnt711_06_br3ory.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859203/251112_osy_bnt711_07_uopozk.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859200/251112_osy_bnt711_08_undqcb.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859194/251112_osy_bnt711_09_hiyvsw.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859191/251112_osy_bnt711_10_uyyzt9.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859188/251112_osy_bnt711_11_ehlvlj.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859209/251112_osy_bnt711_12_ap7qhm.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859212/251112_osy_bnt711_13_qvlhyf.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859215/251112_osy_bnt711_14_pjbglw.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859218/251112_osy_bnt711_15_rmxzgx.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859220/251112_osy_bnt711_16_ybtppg.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859223/251112_osy_bnt711_17_fnuq8u.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859227/251112_osy_bnt711_18_xgcjjf.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859233/251112_osy_bnt711_19_uq55lf.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859236/251112_osy_bnt711_20_voer56.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859239/251112_osy_bnt711_21_cnmbv2.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859242/251112_osy_bnt711_22_sbacqb.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859245/251112_osy_bnt711_23_negoji.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859248/251112_osy_bnt711_24_nf0h0r.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859251/251112_osy_bnt711_25_e6aqxx.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859254/251112_osy_bnt711_26_az1zad.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859257/251112_osy_bnt711_27_sirulp.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859260/251112_osy_bnt711_28_z7vnr5.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859263/251112_osy_bnt711_29_cqvcq8.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859270/251112_osy_bnt711_33_kf5tbf.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859273/251112_osy_bnt711_34_iupwaz.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859276/251112_osy_bnt711_35_xuayxj.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859279/251112_osy_bnt711_39_qpx5qj.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859285/251112_osy_bnt711_40_cm73g5.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859289/251112_osy_bnt711_41_xg2jkb.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859308/251112_osy_bnt711_42_ivnc3h.gif,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859292/251112_osy_bnt711_43_ngnhtk.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859295/251112_osy_bnt711_44_ooqnxc.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859298/251112_osy_bnt711_45_lbmz6l.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859301/251112_osy_bnt711_46_i1kl42.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767859304/251112_osy_bnt711_47_btsxqb.jpg
+                            ">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767859147/detail_tn05_bg_aa53a8.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767859150/detail_tn05_ph_vvgspn.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#" class="detail-card"
+                            data-title="프리미엄 포그 하이웨스트 투핀턱 와이드 슬랙스"
+                            data-desc="
+                                핏과 컬러감이 매력적인 의상이기에 <b>원단감, 핏, 컬러를 한눈에 느끼기 좋은 실물 영상을 인트로에 배치</b>하여 소비자의 시선을 끌 수 있도록 하였고<br>
+                                이후, 슬랙스의 특징인 핀턱이 가장 매력적인 컷을 배치해 슬랙스의 핏과 디자인 정보를 보여주었습니다.
+                            "
+                            data-images="
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860096/251002_osy_bnt189_01_wnedlk.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860103/251002_osy_bnt189_02_utt2ut.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860106/251002_osy_bnt189_03_jlgq1a.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860120/251002_osy_bnt189_04_wrl2sg.gif,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860068/251002_osy_bnt189_05_p0uebi.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860100/251002_osy_bnt189_06_b69dy0.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860093/251002_osy_bnt189_07_gxi6dr.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860116/251002_osy_bnt189_08_ayu95p.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860081/251002_osy_bnt189_09_rcl0ql.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860084/251002_osy_bnt189_10_cfdaki.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860077/251002_osy_bnt189_11_qehhvf.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860065/251002_osy_bnt189_12_wx0tbo.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860074/251002_osy_bnt189_13_pnix4e.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860071/251002_osy_bnt189_14_jhtjxl.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860110/251002_osy_bnt189_15_jvlwdc.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860113/251002_osy_bnt189_16_i05u1r.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860090/251002_osy_bnt189_17_ffqxbm.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860087/251002_osy_bnt189_18_m00ekb.jpg
+                            ">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767860337/detail_tn06_bg_qrnpvb.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767860343/detail_tn06_ph_y4uwjp.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+                   
+                        <a href="#" class="detail-card"
+                            data-title="Be Label 리얼 와이드 폭스퍼 벨티드 패딩"
+                            data-desc="
+                                <b>풍성한 퍼가 매력적인 패딩</b>이기에 퍼를 강조할 수 있는 컷을 초이스하여 최상단에 배치했습니다.<br>
+                                이후, 핏과 기장의 다양성, 디테일 디자인을 볼 수 있는 컷을 짧게 배치하여<br>
+                                인트로에 패딩의 특징을 한눈에 볼 수 있도록 설계하였습니다.
+                            "
+                            data-images="
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860456/251029_osy_22f854_04_b3jjvp.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860471/251029_osy_22f854_05_n2bn89.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860427/251029_osy_22f854_06_u6lge4.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860416/251029_osy_22f854_07_css9fr.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860430/251029_osy_22f854_08_ydcm0h.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860423/251029_osy_22f854_09_adxsjy.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860405/251029_osy_22f854_10_rwmdxt.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860420/251029_osy_22f854_11_pd85ta.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860412/251029_osy_22f854_12_lfqyv3.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860409/251029_osy_22f854_13_h7jin5.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860402/251029_osy_22f854_14_tiybob.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860398/251029_osy_22f854_15_qxrfez.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860434/251029_osy_22f854_16_ymsk3f.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860445/251029_osy_22f854_19_xin9fh.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860448/251029_osy_22f854_20_wn4dfe.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860452/251029_osy_22f854_24_p8qtgn.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860459/251029_osy_22f854_25_jydbln.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860463/251029_osy_22f854_26_mawwvw.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860466/251029_osy_22f854_27_tnf0ba.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860474/251029_osy_22f854_28_exzsp2.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860478/251029_osy_22f854_29_uvmyy9.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860481/251029_osy_22f854_30_xyrjwe.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860485/251029_osy_22f854_31_r8s58e.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860489/251029_osy_22f854_34_jb6ngp.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860508/251029_osy_22f854_35_q2enxw.gif,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860493/251029_osy_22f854_36_flsui8.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860496/251029_osy_22f854_37_sspfrm.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860500/251029_osy_22f854_38_wnlafh.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767860504/251029_osy_22f854_39_bgyhiz.jpg
+                            ">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767861047/detail_tn07_bg_cnxggb.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767861060/detail_tn07_ph_opo33x.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#" class="detail-card"
+                            data-title="프리미엄 캐시미어 100% 홀가먼트 니트"
+                            data-desc="
+                                전 컬러 고스트컷을 인트로에 배치해 <b>컬러 구성을 직관적으로</b> 보여주고,<br>
+                                홀가먼트 공법은 <b>일러스트와 아이콘을 활용</b>해 가독성 있게 표현했습니다.
+                            "
+                            data-images="
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861153/251002_osy_bnt25fw784_01_odzosq.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861173/251002_osy_bnt25fw784_02_ntjzsk.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861181/251002_osy_bnt25fw784_03_bcawau.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861149/251002_osy_bnt25fw784_04_p5q9lc.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861165/251002_osy_bnt25fw784_05_isorop.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861145/251002_osy_bnt25fw784_06_gwi0ho.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861134/251002_osy_bnt25fw784_07_gswxbu.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861157/251002_osy_bnt25fw784_08_ikvlej.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861122/251002_osy_bnt25fw784_09_gspy2g.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861130/251002_osy_bnt25fw784_10_ncrtr9.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861126/251002_osy_bnt25fw784_11_v4s3tg.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861161/251002_osy_bnt25fw784_12_xynt4f.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861138/251002_osy_bnt25fw784_13_j0w5iz.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861141/251002_osy_bnt25fw784_14_sdfmch.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861177/251002_osy_bnt25fw784_15_ps1n1g.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861169/251002_osy_bnt25fw784_16_hcsmsw.jpg
+                            ">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767861340/detail_tn08_bg_ciz4fw.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767861346/detail_tn08_ph_cyz842.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#" class="detail-card"
+                            data-title="에토 피셔 케이블 하프집업 니트"
+                            data-desc="
+                                핏과 무드를 동시에 보여주는 컷을 상단에 배치하고,<br>
+                                매력적인 외모의 모델 컷을 활용해 <b>니트의 감각적인 분위기를 강조</b>했습니다.<br>
+                                착용컷과 이미지컷을 적절히 조합해 페이지를 구성했으며,<br>
+                                아더 컬러 코디 컷을 함께 배치해 다양한 스타일링 가능성을 전달했습니다.
+                            "
+                            data-images="
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861478/250926_osy_bntnt158_01_y4w2cf.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861465/250926_osy_bntnt158_02_r2ajwi.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861474/250926_osy_bntnt158_03_teejbm.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861461/250926_osy_bntnt158_04_ah6405.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861440/250926_osy_bntnt158_05_agyztu.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861470/250926_osy_bntnt158_06_yprku6.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861453/250926_osy_bntnt158_07_tryzzj.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861457/250926_osy_bntnt158_08_xwdo1i.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861449/250926_osy_bntnt158_09_ju7jly.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861445/250926_osy_bntnt158_10_khmyfl.jpg
+                            ">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767861693/detail_tn09_bg_nmvrmg.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767861716/detail_tn09_ph_r90hwi.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#" class="detail-card"
+                            data-title="Better Jeans (No.266) 프리미엄 더블텐션 커스텀핏"
+                            data-desc="
+                                촬영본이 전체적으로 깔끔하고 심플한 느낌이 강해,<br>
+                                인트로에는 다양한 전방향 컷을 gif로 루프하여 <b>심플하면서 화려하도록 디자인</b>하였습니다.<br>
+                                이후 핏과 무드가 보이는 컷을 깔끔하고 심플한 레이아웃으로 배치하여, <b>소비자의 시선이 재밌게 이동할 수 있도록</b> 디자인하였습니다.
+                            "
+                            data-images="
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861807/250605_osy_better266_01_lmt4p0.gif,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861776/250605_osy_better266_02_mutefo.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861780/250605_osy_better266_03_g08yq5.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861771/250605_osy_better266_04_v3dadb.gif,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861793/250605_osy_better266_05_seahmr.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861802/250605_osy_better266_06_o8tuun.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861784/250605_osy_better266_07_jwcgnk.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861789/250605_osy_better266_08_algnjg.jpg
+                            ">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767861898/detail_tn10_bg_vx3lli.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767861905/detail_tn10_ph_cy2evf.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+                        
+                        <a href="#" class="detail-card"
+                            data-title="블러썸 코튼 브이넥 가디건"
+                            data-desc="
+                                분할 레이아웃 인트로로 가디건의 다양한 컬러와 무드를 한눈에 보여주고, 메인 컬러 착용컷을 중심으로 제품 정보를 구성했습니다.<br>
+                                <b>컬러 수가 많은 특성을 고려해 GIF를 활용한 루프 구성</b>으로 전체 컬러를 한 시선에서 확인할 수 있도록 디자인했습니다.
+                            "
+                            data-images="
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861935/250328_osy_cottoncardigan_01_rbcqjg.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861967/250328_osy_cottoncardigan_02_ytrjj5.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861981/250328_osy_cottoncardigan_03_tnaibk.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861990/250328_osy_cottoncardigan_04_cqr0pk.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861986/250328_osy_cottoncardigan_05_oonhfl.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861973/250328_osy_cottoncardigan_06_psdd9b.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861999/250328_osy_cottoncardigan_07_hf169z.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767861976/250328_osy_cottoncardigan_08_vliqnm.jpg
+                            ">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767862087/detail_tn11_bg_twpwza.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767862095/detail_tn11_ph_jim2rs.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+                        
+                        <a href="#" class="detail-card"
+                            data-title="시스루 여리 썸머 루즈핏 니트"
+                            data-desc="
+                                모바일 환경상 세로형 이미지가 주를 이루는 쇼핑몰 구조 속에서,<br>
+                                바다 배경의 무드를 파노라마처럼 전달하기 위해 최상단에 <b>가로형 이미지를 배치해 색다른 시각적 재미</b>를 주었습니다.<br>
+                                여름 니트의 시원한 특성과 뒷 버튼 디테일이 잘 드러나는 컷을 활용했으며,<br>
+                                <b>길고 날렵한 폰트를 사용해 전체적인 청량감을 더욱 강조</b>했습니다.
+                            "
+                            data-images="
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862180/250512_osy_bnts07_01_ll22pq.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862193/250512_osy_bnts07_02_ijiufx.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862170/250512_osy_bnts07_03_aa94e2.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862205/250512_osy_bnts07_04_bgzsb7.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862175/250512_osy_bnts07_05_o6ptaq.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862188/250512_osy_bnts07_06_dkxgfh.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862149/250512_osy_bnts07_07_ofpjzi.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862159/250512_osy_bnts07_08_ooxhkb.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862165/250512_osy_bnts07_09_nwwn8h.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862154/250512_osy_bnts07_10_o3ovkm.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862200/250512_osy_bnts07_11_facskp.jpg
+                            ">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767862297/detail_tn12_bg_ces1ac.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767862305/detail_tn12_ph_j3xxkk.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#" class="detail-card"
+                            data-title="스모어 하찌 루즈핏 라운드 니트"
+                            data-desc="
+                                배경이 복잡한 야외 촬영본의 특성을 고려해 <b>심플한 구성으로 균형</b>을 맞췄으며,<br>
+                                컬러가 돋보이는 코디 컷을 동일한 레이아웃으로 배치해 <b>각 컬러의 매력을 강조</b>했습니다.
+                            "
+                            data-images="
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862356/250903_osy_bnt294_02_fdosli.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862401/250903_osy_bnt294_03_hyn1wn.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862396/250903_osy_bnt294_04_z3bpdc.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862385/250903_osy_bnt294_05_qwjmrg.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862408/250903_osy_bnt294_06_dvwqpm.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862366/250903_osy_bnt294_07_gx0jni.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862392/250903_osy_bnt294_08_xvpzwe.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862372/250903_osy_bnt294_09_iidauw.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862379/250903_osy_bnt294_10_baanep.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862362/250903_osy_bnt294_11_gttj3v.jpg
+                            ">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767862512/detail_tn13_bg_yn3kxs.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767862528/detail_tn13_ph_cvqhpf.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#" class="detail-card"
+                            data-title="스모킹 프릴 밴딩 크롭 블라우스"
+                            data-desc="
+                                파스텔 톤의 시드니 배경과 여성스러운 블라우스 디자인이 조화롭게 어우러지는 컷을 선별해, <b>의상의 무드와 배경이 잘 드러나도록 보정 및 구성</b>했습니다.<br>
+                                착용컷만 단순 나열하지 않고 현지 이미지 컷을 자연스럽게 배치해 시선 흐름이 유연하게 이어지도록 디자인했습니다.
+                            "
+                            data-images="
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862643/250523_osy_bnt590_01_pakvws.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862624/250523_osy_bnt590_02_a8nye6.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862630/250523_osy_bnt590_03_e1bcgp.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862612/250523_osy_bnt590_04_xat8qc.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862618/250523_osy_bnt590_05_dxklg4.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862636/250523_osy_bnt590_06_nlxl4u.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862601/250523_osy_bnt590_07_rjkwmh.jpg
+                            ">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767862766/detail_tn14_bg_rdo0ua.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767862776/detail_tn14_ph_km81hc.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                         <a href="#" class="detail-card"
+                            data-title="말랑 논페이드 워밍 기모 세미와이드 데님 팬츠 "
+                            data-desc="
+                                심플하고 캐주얼한 무드를 강조하여 디자인 하였습니다.<br>
+                                핏이 매력적인 하의이기에 <b>360° 전 방향의 핏을 배경이 이어지듯이 레이아웃을 구성</b>하여<br>
+                                소비자가 핏에 집중할 수 있도록 디자인 하였습니다.
+                            "
+                            data-images="
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767863471/251127_osy_kdgfj7262_01_ycxmgk.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767863068/251127_osy_kdgfj7262_02_ntlhxu.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767863467/251127_osy_kdgfj7262_03_xwxzj5.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862804/251127_osy_kdgfj7262_04_fi7x6e.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862965/251127_osy_kdgfj7262_05_jzuvtk.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862852/251127_osy_kdgfj7262_06_ncg1dk.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862834/251127_osy_kdgfj7262_07_jc4riv.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767862840/251127_osy_kdgfj7262_08_bbxeu6.jpg
+                            ">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767863568/detail_tn15_bg_ejklni.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767863559/detail_tn15_ph_efcaox.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+                        
+                        <a href="#" class="detail-card"
+                            data-title="프리미엄 네이븐 페미닌 벨티드 하프 패딩"
+                            data-desc="
+                                벨트 착용 여부, 매듭 연출, 넥을 올리거나 펼치는 방식 등<br>
+                                다양한 스타일링이 가능한 패딩으로, <b>여러 착용 방식을 균형 있게 담아 구성했습니다.</b><br>
+                                다양한 컷이 조잡해 보이지 않도록 레이아웃은 심플하게 정리했으며,<br>
+                                디테일이 많은 상품 특성상 설명은 이미지화하여 가독성 있게 전달했습니다.
+                            "
+                            data-images="
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767864419/251031_osy_736jp_02_wmsdgo.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767864380/251031_osy_736jp_03_jeosry.gif,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767864373/251031_osy_736jp_04_z7vj9k.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767864425/251031_osy_736jp_05_farcxi.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767863619/251031_osy_736jp_06_qbmja1.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767864215/251031_osy_736jp_07_lzrbaj.webp,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767864347/251031_osy_736jp_08_xdefxu.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767864367/251031_osy_736jp_09_vm9unq.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767864432/251031_osy_736jp_10_qmvune.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767864354/251031_osy_736jp_11_xbjwvs.gif,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767864360/251031_osy_736jp_12_zirmqf.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767864386/251031_osy_736jp_13-1_pwazta.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767864392/251031_osy_736jp_14_posrzz.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767864399/251031_osy_736jp_15_yh7avz.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767864406/251031_osy_736jp_16_r1gy1p.jpg,
+                            https://res.cloudinary.com/dannjf5lf/image/upload/v1767864412/251031_osy_736jp_17_tooryg.jpg
+                            ">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767864680/detail_tn16_bg_bjfyy7.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767864689/detail_tn16_ph_zezsiv.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+                        
+                    </div>
+
+                    <div class="card-grid" id="clinic">
+                        <!-- 성형외과 카드 -->
+                         <a href="#" class="detail-card"
+                            data-title="광채스킨 울쎄라"
+                            data-desc="
+                                겨울 시즌 스킨케어 이벤트로, 스노우볼 컨셉을 적용한 상세페이지입니다.<br>
+                                푸른 톤과 화이트 컬러를 중심으로 색감을 구성하고, 눈송이 스파클 이펙트를 활용해 겨울의 분위기를 감각적으로 표현했습니다.
+                            "
+                            data-image="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855741/detail_tn01_page_ftvaud.jpg">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855727/detail_tn01_bg_ilna0f.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855735/detail_tn01_ph_ytm2k0.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#"
+                            class="detail-card"
+                            data-title="눈망울쎄라"
+                            data-desc="
+                                광채스킨 울쎄라와 함께 출시된 겨울 시즌 이벤트 상세페이지로,<br>
+                                전체 디자인 톤은 통일하되 썸네일을 차별화해 다른 상품임을 명확히 전달했습니다.<br>
+                                유사한 디자인 구조를 활용해 제작 효율을 높이고, 성수기 빠른 업로드가 가능하도록 구성했습니다.
+                            "
+                            data-image="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855742/detail_tn03_page_jfrpip.jpg">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855729/detail_tn03_bg_csz2yj.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855737/detail_tn03_ph_yacttc.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#"
+                            class="detail-card"
+                            data-title="브이로 리프팅"
+                            data-desc="
+                                다양한 핸드피스를 활용하는 브이로 리프팅 시술의 특징을 쉽게 이해할 수 있도록 이미지 중심으로 설명한 상세페이지입니다.<br>
+                                복잡한 정보를 직관적으로 전달하며, 고급스러운 디자인 톤으로 시술의 프리미엄 이미지를 강화했습니다.
+                            "
+                            data-image="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855743/detail_tn05_page_miyvx5.jpg">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855731/detail_tn05_bg_xenx1m.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767856707/detail_tn05_ph_cgqi6z.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#"
+                            class="detail-card"
+                            data-title="러블리주사"
+                            data-desc="
+                                크리스마스 이벤트용 상세페이지로, 2인이 협업하여 제작했습니다.<br>
+                                썸네일, 모델 보정, 누끼 작업, 페이지 구성을 담당했으며,<br>
+                                산타·눈송이·트리 요소를 활용해 크리스마스 무드를 강조했습니다.<br>
+                                하단 공통 영역에도 크리스마스 요소를 적용해 시즌감을 강화했습니다.
+                            "
+                            data-image="https://res.cloudinary.com/dannjf5lf/image/upload/v1767856749/detail_tn04_page_vkepx8.jpg">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855730/detail_tn04_bg_wvigpi.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855739/detail_tn04_ph_iathub.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+
+                         <a href="#"
+                            class="detail-card"
+                            data-title="비절개 눈매교정"
+                            data-desc="
+                                비절개 눈매교정 수술의 특징과 절개 수술과의 차이를 직관적으로 이해할 수 있도록 구성한 상세페이지입니다.<br>
+                                성형 입문 고객을 고려한 부드러운 디자인으로 수술에 대한 부담감을 낮추는 데 중점을 두었습니다.
+                            "
+                        data-image="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855740/detail_tn02_page_m2k43v.jpg">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855728/detail_tn02_bg_qcqmat.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855734/detail_tn02_ph_oxaecu.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#"
+                            class="detail-card"
+                            data-title="올리지오"
+                            data-desc="
+                                올리지오 브랜드 컬러인 보라색을 중심으로 디자인한 리프팅 시술 이벤트 페이지입니다.<br>
+                                다른 리프팅 시술과의 차별점을 아이콘과 이미지를 활용해 가독성 있게 구성하여, 올리지오만의 장점이 잘 드러나도록 제작했습니다.
+                            "
+                            data-image="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855745/detail_tn06_page_xgbwzd.jpg">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855732/detail_tn06_bg_zi6njn.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855738/detail_tn06_ph_vw4l4n.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#"
+                            class="detail-card"
+                            data-title="하트입술 필러"
+                            data-desc="
+                                하트입술 필러라는 네이밍에 맞춰 러블리하고 키치한 무드로 디자인한 상세페이지입니다.<br>
+                                다이어리를 꾸민 듯한 구성과 스탬프 스티커 요소를 활용해 젊은 고객층을 타겟으로 한 디자인을 완성했습니다.
+                            "
+                            data-image="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855764/detail_tn07_page_jtjk9f.jpg">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855733/detail_tn07_bg_gy64ka.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855746/detail_tn07_ph_biizro.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#"
+                            class="detail-card"
+                            data-title="피코토닝"
+                            data-desc="
+                                몽환적인 밤의 분위기를 컨셉으로 제작한 상세페이지입니다.<br>
+                                썸네일에는 무지개와 빛 이펙트를 활용해 홀로그램 같은 이미지를 연출하고,<br>
+                                전체적으로 통일된 글로우 효과로 신비로운 분위기를 강조했습니다.
+                            "
+                            data-image="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855749/detail_tn08_page_vpi7pa.jpg">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855747/detail_tn08_bg_kwt8d1.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855748/detail_tn08_ph_qdjj1e.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#"
+                            class="detail-card"
+                            data-title="탄력+미백 빼키지 빼빼로데이 스킨케어 이벤트"
+                            data-desc="
+                                흔한 빼빼로데이 이벤트와 달리 시즌감이 과도하게 드러나지 않도록 기획된 디자인입니다.<br>
+                                과한 빼빼로 요소는 지양하고 숫자에 심플한 빼빼로 형태만 적용해, 고급스러운 모델의 분위기와 귀여운 포인트가 조화롭게 어우러지도록 구성했습니다.
+                            "
+                            data-image="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855767/detail_tn09_page_xddg3f.jpg">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855750/detail_tn09_bg_m7mprb.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855752/detail_tn09_ph_yj1762.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#"
+                            class="detail-card"
+                            data-title="플로라셀"
+                            data-desc="
+                                보라색과 무지개 톤을 조합해 힙하고 트렌디한 분위기로 디자인한 상세페이지입니다.<br>
+                                홀로그램 이미지를 적극 활용해 젊은 고객층을 겨냥한 감각적인 비주얼을 완성했습니다.
+                            "
+                            data-image="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855766/detail_tn10_page_mcqjbn.jpg">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855753/detail_tn10_bg_bp7vcp.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855754/detail_tn10_ph_fuy5xe.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#"
+                            class="detail-card"
+                            data-title="울써튠"
+                            data-desc="
+                                울쎄라, 써마지, 튠라이너를 결합한 리프팅 3종 세트 이벤트 상세페이지입니다.<br>
+                                각 시술의 장점을 균형 있게 전달하며, 녹색 톤의 디자인으로 청량하고 자연스러운 리프팅 이미지를 표현했습니다.
+                            "
+                            data-image="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855769/detail_tn11_page_gn1mg2.jpg">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855755/detail_tn11_bg_de7e42.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855756/detail_tn11_ph_a7wir3.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#"
+                            class="detail-card"
+                            data-title="스킨보톡스"
+                            data-desc="
+                                쁘띠 시술 입문 고객을 고려해 제작한 스킨보톡스 상세페이지입니다.<br>
+                                시술 효과, 시술 부위, 추천 대상 등을 상세하고 가독성 있게 정리해 고객의 궁금증을 해소하는 데 중점을 두었습니다.
+                            "
+                            data-image="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855772/detail_tn12_page_nczoyd.jpg">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855757/detail_tn12_bg_i3sjhq.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855759/detail_tn12_ph_lsqbak.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+
+                        <a href="#"
+                            class="detail-card"
+                            data-title="자연유착 쌍꺼풀"
+                            data-desc="
+                                수능 이벤트용 자연유착 쌍꺼풀 상세페이지로, 학생 타겟에 맞춰 풋풋한 이미지를 강조했습니다.<br>
+                                성형 경험이 없는 고객을 고려해 설명 위주의 구성과 필수 정보를 알기 쉽게 정리했습니다.
+                            "
+                            data-image="https://res.cloudinary.com/dannjf5lf/image/upload/v1767855771/detail_tn13_page_jdsksc.jpg">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767856813/detail_tn13_bg_ef1pxc.jpg" class="card-bg-img">
+                            <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767856814/detail_tn13_ph_pnsftw.png" class="card-ph-img">
+                            <i class="bi bi-plus-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 팝업 오버레이 -->
+            <div class="popup-overlay" id="popup">
+                  <div class="popup-box">
+                    <button class="popup-close">×</button>
+                    <!-- 왼쪽 이미지 영역 -->
+                    <div class="popup-image">
+                        <img id="popup-img" src="../images/detail_tn01_page.jpg">
+                    </div>
+                    <!-- 오른쪽 설명-->
+                    <div class="popup-content">
+                        <h3 id="popup-title"></h3>
+                        <p id="popup-desc"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 푸터 -->
+            <footer class="footer">
+                <div class="footer-inner">
+                    <div class="footer-avatar">
+                        <img src="https://res.cloudinary.com/dannjf5lf/image/upload/v1767715053/mimoticon_wnywhi.png">
+                    </div>
+                    <h2 class="footer-name">OHSEOYEON</h2>
+                    <nav class="footer-nav">
+                        <a href="portfolio_2026.html">Home</a>
+                        <span>|</span>
+                        <a href="portfolio_2026.html">Profile</a>
+                        <span>|</span>
+                        <a href="portfolio_2026.html">Detail Page</a>
+                        <span>|</span>
+                        <a href="portfolio_2026.html">Ad Design</a>
+                        <span>|</span>
+                        <a href="portfolio_2026.html">Banner</a>
+                        <span>|</span>
+                        <a href="portfolio_2026.html">Retouch</a>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+
+        <!--top버튼-->
+        <div id="topbtn">
+            <div><i class="bi bi-arrow-up-short"></i></div>
+        </div>
+    </body>
+    
+    
+
+</html>
