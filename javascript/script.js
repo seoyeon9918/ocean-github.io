@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const MAX_VELOCITY = 25;
 
     let lastTime = performance.now();
-    const SPEED_PX_PER_SEC = 40;
+    const SPEED_PX_PER_SEC = 60;
 
     function autoSlide(now) {
       if (!isDown && !isInertia) {
@@ -45,19 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     requestAnimationFrame(autoSlide);
-
-
-    /*
-    const AUTO_SPEED = 0.4;
-
-    function autoSlide() {
-      if (isDown || isInertia) return;
-      wrapper.scrollLeft += AUTO_SPEED;
-      autoId = requestAnimationFrame(autoSlide);
-    }
-    autoSlide();
-    */
-
 
     wrapper.addEventListener('mousedown', e => {
       isDown = true;
