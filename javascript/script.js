@@ -31,19 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let autoId = null;
 
     const MAX_VELOCITY = 25;
+    const AUTO_SPEED = 0.4;
 
-    let lastTime = performance.now();
-    const SPEED_PX_PER_SEC = 50;
-
-    function autoSlide(now) {
-      if (!isDown && !isInertia) {
-        const delta = (now - lastTime) / 800;
-        wrapper.scrollLeft += SPEED_PX_PER_SEC * delta;
-      }
-      lastTime = now;
+    function autoSlide() {
+      if (isDown || isInertia) return;
+      wrapper.scrollLeft += AUTO_SPEED;
       autoId = requestAnimationFrame(autoSlide);
     }
-    requestAnimationFrame(autoSlide);
+    autoSlide();
+    
 
     wrapper.addEventListener('mousedown', e => {
       isDown = true;
