@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function autoSlide(now) {
       if (!isDown && !isInertia) {
-        const delta = (now - lastTime) / 1000;
+        const delta = (now - lastTime) / 900;
         wrapper.scrollLeft += SPEED_PX_PER_SEC * delta;
       }
       lastTime = now;
