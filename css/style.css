@@ -369,8 +369,7 @@ header nav ol li:hover {
     border-radius: 13px; overflow: hidden;
 }
 .slide-item img {pointer-events: none; user-select: none; -webkit-user-drag: none;}
-.slide-item.wide {width: 680px; aspect-ratio: 17 / 8;}
-e-item.wide {width: 320px; aspect-ratio: 16 / 9;}
+.slide-item.wide {width: 680px; aspect-ratio: 16 / 9;}
 
 /* =========================== 배너디자인 =========================== */
 .banner-section {
