@@ -31,7 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
     let autoId = null;
 
     const MAX_VELOCITY = 25;
-    const AUTO_SPEED = 0.5;
+    
+    let lastTime = performance.now();
+    const SPEED_PX_PER_SEC = 40;
+
+    function autoSlide(now) {
+      if (!isDown && !isInertia) {
+        const delta = (now - lastTime) / 1000;
+        wrapper.scrollLeft += SPEED_PX_PER_SEC * delta;
+      }
+      lastTime = now;
+      autoId = requestAnimationFrame(autoSlide);
+    }
+
+    requestAnimationFrame(autoSlide);
 
     function autoSlide() {
       if (isDown || isInertia) return;
