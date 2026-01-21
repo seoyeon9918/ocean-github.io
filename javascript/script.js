@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const $ = s => document.querySelector(s);
   const $$ = s => document.querySelectorAll(s);
 
-  /*  헤더 애니메이션 */
+  /* ================= 헤더 애니메이션 ================= */
   const header = $('header');
   if (header) {
     let currentY = 0;
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     animate();
   }
 
-  /* 광고디자인 슬라이더 */
+  /* ================= 광고디자인 슬라이더 ================= */
   $$('.slider-wrapper').forEach(wrapper => {
     const track = wrapper.querySelector('.slider-track');
     if (!track) return;
@@ -31,11 +31,17 @@ document.addEventListener('DOMContentLoaded', () => {
     let autoId = null;
 
     const MAX_VELOCITY = 25;
-    const AUTO_SPEED = 0.3;
+    const AUTO_SPEED = 0.6;
 
     function autoSlide() {
-      if (isDown || isInertia) return;
-      wrapper.scrollLeft += AUTO_SPEED;
+      if (!isDown && !isInertia) {
+        wrapper.scrollLeft += AUTO_SPEED;
+
+        // 윈도우 scroll 고착 방지
+        if (wrapper.scrollLeft === 0) {
+          wrapper.scrollLeft = 1;
+        }
+      }
       autoId = requestAnimationFrame(autoSlide);
     }
     autoSlide();
@@ -46,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
       startX = e.pageX;
       scrollLeft = wrapper.scrollLeft;
       velocity = 0;
-      cancelAnimationFrame(autoId);
     });
 
     wrapper.addEventListener('mousemove', e => {
@@ -75,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
           requestAnimationFrame(inertia);
         } else {
           isInertia = false;
-          setTimeout(autoSlide, 300);
         }
       }
       inertia();
@@ -92,50 +96,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* nav + bottom-nav 스크롤 이동 */
+  /* ================= nav 스크롤 이동 ================= */
   $$('a[data-target]').forEach(link => {
     link.addEventListener('click', e => {
       const selector = link.dataset.target;
-      if (!selector) return;
-
       const target = document.querySelector(selector);
       if (!target) return;
 
       e.preventDefault();
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 
-  document.querySelectorAll('header nav ol li').forEach(li => {
-  li.addEventListener('click', e => {
-    const link = li.querySelector('a[data-target]');
-    if (!link) return;
-
-    link.click();
-  });
-});
-
-/* 맨 위로 가기 */
+  /* ================= 맨 위로 ================= */
   const topBtn = $('#topbtn');
   if (topBtn) {
     topBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
-
 });
 
+/* ================= 공통 클릭 이벤트 ================= */
 document.addEventListener('click', e => {
-
   /* show more (home) */
   if (e.target.closest('#toggleBtn')) {
     const btn = e.target.closest('#toggleBtn');
     const moreContent = document.querySelector('#moreContent');
     const arrow = btn.querySelector('.arrow');
-
     if (!moreContent) return;
 
     const isOpen = moreContent.classList.toggle('active');
@@ -143,20 +131,16 @@ document.addEventListener('click', e => {
 
     if (isOpen) {
       setTimeout(() => {
-        moreContent.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
+        moreContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 200);
     }
   }
 
-  /*  show more (banner) */
+  /* show more (banner) */
   if (e.target.closest('#moreBtn')) {
     const btn = e.target.closest('#moreBtn');
     const content = document.querySelector('#showMoreContent');
     const arrow = btn.querySelector('.rrow');
-
     if (!content) return;
 
     const isOpen = content.classList.toggle('active');
@@ -164,154 +148,13 @@ document.addEventListener('click', e => {
 
     if (isOpen) {
       setTimeout(() => {
-        btn.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
+        btn.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 200);
     }
   }
-
 });
 
-/* 배너 팝업 */
-const popup = document.getElementById('bannerPopup');
-const title = popup.querySelector('.popup-title');
-const sub = popup.querySelector('.popup-sub');
-const groups = popup.querySelectorAll('.popup-group');
-const closeBtn = popup.querySelector('.popup-close');
-
-/* 카드 클릭 */
-document.querySelectorAll('.banner-card').forEach(card => {
-  card.addEventListener('click', () => {
-    const type = card.dataset.type;
-
-    groups.forEach(group => {
-      group.style.display =
-        group.dataset.type === type ? 'block' : 'none';
-    });
-
-    popup.style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // 배경 스크롤 방지
-  });
-});
-
-/* 닫기 */
-function closePopup() {
-  popup.style.display = 'none';
-  document.body.style.overflow = '';
-}
-
-closeBtn.addEventListener('click', closePopup);
-
-/* 배경 클릭 닫기 */
-popup.addEventListener('click', e => {
-  if (e.target === popup) closePopup();
-});
-
-/*  배너 페이지 페이드 슬라이드 + 마우스 드래그 */
-document.addEventListener('DOMContentLoaded', () => {
-  const slider = document.querySelector('.banner-slider');
-  const slides = document.querySelectorAll('.banner-slider .slide');
-  const dots = document.querySelectorAll('.dot');
-
-  if (!slider || !slides.length) return;
-
-  let currentIndex = 0;
-  let timer = null;
-  
-
-  /* 슬라이드 표시  */
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
-    });
-
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === index);
-    });
-
-    currentIndex = index;
-  }
-
-  function nextSlide() {
-    showSlide((currentIndex + 1) % slides.length);
-  }
-
-  function prevSlide() {
-    showSlide((currentIndex - 1 + slides.length) % slides.length);
-  }
-
-  function startAuto() {
-    clearInterval(timer);
-    timer = setInterval(nextSlide, 3500);
-  }
-
-  /* dot 클릭 */
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-      showSlide(i);
-      startAuto();
-    });
-  });
-
-  /*  마우스 드래그 */
-  let startX = 0;
-  let isDragging = false;
-
-  slider.addEventListener('mousedown', e => {
-    startX = e.pageX;
-    isDragging = true;
-    clearInterval(timer);
-  });
-
-  slider.addEventListener('mousemove', e => {
-    if (!isDragging) return;
-  });
-
-  slider.addEventListener('mouseup', e => {
-    if (!isDragging) return;
-    isDragging = false;
-
-    const diff = e.pageX - startX;
-
-    if (Math.abs(diff) > 50) {
-      diff < 0 ? nextSlide() : prevSlide();
-    }
-
-    startAuto();
-  });
-
-  slider.addEventListener('mouseleave', () => {
-    isDragging = false;
-  });
-
-  /* 이미지 드래그 방지 */
-  slider.querySelectorAll('img').forEach(img => {
-    img.addEventListener('dragstart', e => e.preventDefault());
-  });
-
-  startAuto();
-});
-
-
-/* 보정 카테고리 */
-document.querySelectorAll('.retouch-box').forEach(box => {
-  const toggle = box.querySelector('.toggle-wrap');
-  const images = box.querySelectorAll('.img-box');
-
-  toggle.addEventListener('click', () => {
-    const isBefore = toggle.dataset.state === 'before';
-    toggle.dataset.state = isBefore ? 'after' : 'before';
-
-    images.forEach(imgBox => {
-      imgBox.querySelector('.before').classList.toggle('active', !isBefore);
-      imgBox.querySelector('.after').classList.toggle('active', isBefore);
-    });
-  });
-});
-
-/* 방지 */
+/* ================= 우클릭 / 단축키 방지 ================= */
 document.addEventListener('contextmenu', e => e.preventDefault());
 document.addEventListener('keydown', e => {
   if (
