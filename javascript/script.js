@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let autoId = null;
 
     const MAX_VELOCITY = 25;
-    const AUTO_SPEED = 0.3;
+    const AUTO_SPEED = 0.4;
 
     function autoSlide() {
       if (isDown || isInertia) return;
