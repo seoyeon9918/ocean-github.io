@@ -31,13 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let autoId = null;
 
     const MAX_VELOCITY = 25;
-    const AUTO_SPEED = 0.6;
+    const AUTO_SPEED = 0.4;
 
     function autoSlide() {
       if (!isDown && !isInertia) {
         wrapper.scrollLeft += AUTO_SPEED;
 
-        // 윈도우 scroll 고착 방지
         if (wrapper.scrollLeft === 0) {
           wrapper.scrollLeft = 1;
         }
